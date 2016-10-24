@@ -1,0 +1,37 @@
+{
+    "errorNo": 0,
+    "errorMsg": "success",
+    "data": {
+        "list": [
+            {
+                "uid": "310269496",
+                "contact_name": "张三",
+                "contact_phone": "13000001234",
+                "order_id": "96100004201601132019340001",
+                "hotel_id": "fdafd21534",
+                "hotel_name": "皇家大酒店",
+                "src": "ctrip",
+                "src_order_id": "ctrip0001",
+                "order_status": 1,
+                "order_discribe": "已入住",
+                "room_num": 2,
+                "stay_nights": 3,
+                "room_type_id": 3,
+                "room_type": "大床房",
+                "confirm_time": "1470067200",
+                "cancel_time": "1470153600",
+                "pay_time": "1470153600",
+                "payment_type": "0",
+                "sale_price": 12000,
+                "commission_rate": 0.05,
+                "commission": 8,
+                "order_time": "1470153000",
+                "checkin_time": "1470067200",
+                "checkout_time": "1470153600"
+            }
+        ],
+        "pn_total": 623,
+        "pn": 1
+    },
+    "time": 1470635039
+}

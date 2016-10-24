@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>百度糯米酒店自营系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-custom.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="bower_components/toastr/toastr.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="bower_components/jquery-file-upload/css/jquery.fileupload.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-tokenfield/dist/css/bootstrap-tokenfield.css">
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/south-street/jquery-ui.css">
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/south-street/theme.css">
+    <link rel="stylesheet" href="dep/waitMe.css">
+    <link rel="stylesheet" href="bower_components/jt.timepicker/jquery.timepicker.css">
+    <link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css">
+    <link rel="stylesheet" href="bower_components/select2/dist/css/select2.css">
+    <link rel="stylesheet" href="bower_components/uploade/uploade.css">
+    <link rel="stylesheet" href="bower_components/uploade/webuploader.css">
+    <link rel="stylesheet" href="bower_components/datapika/pikaday.css">
+    <link rel="stylesheet" href="bower_components/jquerpage/jquery.pagination.css">
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container-fluid expanded-panel">
+            <div id="logo" class="pull-left">
+                <a href="index.html">后台管理系统</a>
+            </div>
+            <div class="userinfo pull-right">
+                <ul class="list-inline">
+                    <li><a target="_self" class="logout" id="logout">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="main" class="container-fluid">
+        <div class="row">
+            <div id="sidebar-left" class="pull-left">
+                <ul class="metismenu" id="menu">
+                    <li class="parent">
+                        <a  href="#" aria-expanded="true" >HOME<span class="fa fa-chevron-right"></span></a>
+                        <ul aria-expanded="false">
+                        	<li >
+                                <a data-module="order" href="#/order">
+                                    城市经理汇总页面<span class="fa fa-check"></span>
+                                </a>
+                            </li>
+                            <!--<li>
+                                <a data-module="uploaddetails" href="#/uploaddetails">
+                                    上传管理页面<span class="fa fa-check"></span>
+                                </a>
+                            </li>-->
+                             <li>
+                                <a data-module="ordermang" href="#/ordermang">
+                                    订单管理页面<span class="fa fa-check"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-module="adsumpage" href="#/adsumpage">
+                                    审核汇总页面<span class="fa fa-check"></span>
+                                </a>
+                            </li>
+                            <!--<li>
+                                <a data-module="auditepage" href="#/auditepage">
+                                    审核详情页面<span class="fa fa-check"></span>
+                                </a>
+                            </li>-->
+                            <li>
+                                <a data-module="archivepage" href="#/archivepage">
+                                    归档页面<span class="fa fa-check"></span>
+                                </a>
+                            </li>
+                            <!--<li>
+                                <a data-module="archivedetipage" href="#/archivedetipage">
+                                    归档详情页面<span class="fa fa-check"></span>
+                                </a>
+                            </li>-->
+                             <li>
+                                <a data-module="accontmang" href="#/accontmang">
+                                    对账管理页面<span class="fa fa-check"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--Start Content-->
+            <div id="content">
+                <div class="preloader">
+                    <img src="static/images/loading-data.gif" class="devoops-getdata" alt="preloader" />
+                </div>
+                <div id="module-content"></div>
+            </div>
+            <!--End Content-->
+        </div>
+    </div>
+    <div class="modal" id="stationinfo">
+    </div>
+    <div class="modal" id="pullbanci">
+    </div>
+    <div class="modal" id="supplierform">
+    </div>
+    <div class="modal" id="train_supplierform">
+    </div>
+    <div class="modal" id="flight_supplierform">
+    </div>
+    <!--
+    <script src="bower_components/requirejs/require.js"></script>
+    <script src="static/js/config.js"></script>
+    <script src="module/common/common.js"></script>
+    <script src="static/js/main.js"></script>
+    -->
+    <script src="bower_components/requirejs/require.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/metisMenu/dist/metisMenu.js"></script>
+    <!--<script src="bower_components/typeahead.js/dist/typeahead.bundle.js"></script>-->
+    <script src="dep/waitMe.js"></script>
+    <!--script src="static/js/layout.js"></script-->
+    <script src="static/js/config.js"></script>
+    <!--<script type="text/javascript">
+    require(['env'], function(env) {
+        var auth = env.auth;
+        var login302 = encodeURIComponent(env.server + '/index/login?url=' + encodeURIComponent(location.href.replace(/\?.*(\#.*)/, '$1')));
+        if (typeof isLogin !== 'undefined' && !isLogin) {
+            location.href = auth + '/login?service=' + login302;
+        }
+    });
+    </script>-->
+    <!--<script src="bower_components/fancybox/source/jquery.fancybox.js"></script>-->
+    <script src="module/common/common.js"></script>
+    <script src="static/js/main.js"></script>
+    <!--<script src="static/js/showpeson.js"></script>-->
+</body>
+
+</html>
